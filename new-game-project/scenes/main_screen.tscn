@@ -1,0 +1,172 @@
+[gd_scene load_steps=11 format=3 uid="uid://kf52qgxymb3p"]
+
+[ext_resource type="FontFile" uid="uid://chhcjebwjveho" path="res://fonts/lizzard-font/Lizzard-nAx4.ttf" id="1_w87pm"]
+[ext_resource type="Script" uid="uid://cwbd6e3xm328l" path="res://scripts/title_effect.gd" id="2_a46j4"]
+[ext_resource type="Script" uid="uid://b4ytg8ey07wjc" path="res://scripts/title_effect2.gd" id="3_23dc1"]
+[ext_resource type="Texture2D" uid="uid://c3g6wmmkkd7w1" path="res://art/volume_icon.png" id="4_il54y"]
+[ext_resource type="Script" uid="uid://bm8i1s13gjy2c" path="res://scripts/signal-bus/signal_bus_sender.gd" id="5_4takm"]
+[ext_resource type="Texture2D" uid="uid://cjku41es8v40u" path="res://art/br.svg" id="5_a46j4"]
+
+[sub_resource type="Theme" id="Theme_wm3ai"]
+
+[sub_resource type="FontVariation" id="FontVariation_wm3ai"]
+base_font = ExtResource("1_w87pm")
+spacing_glyph = 15
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_8dubc"]
+script = ExtResource("2_a46j4")
+metadata/_custom_type_script = "uid://cwbd6e3xm328l"
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_cgfq5"]
+script = ExtResource("3_23dc1")
+metadata/_custom_type_script = "uid://b4ytg8ey07wjc"
+
+[node name="Main screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5494822, 0.87530625, 0.9999998, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 927.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.7493709, 0.3655549, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_wm3ai")
+theme_override_constants/paragraph_separation = 15
+theme_override_constants/outline_size = 30
+theme_override_fonts/normal_font = SubResource("FontVariation_wm3ai")
+bbcode_enabled = true
+text = "
+[center][color=db6d15][font=res://fonts/MfPaw/MfPawPrints-rgXM7.ttf][font_size=96][label]M e m ó r i a[/label][/font_size][/font][/color][title][font_size=120]
+Animal[/font_size][/title][/center]"
+fit_content = true
+custom_effects = [SubResource("RichTextEffect_8dubc"), SubResource("RichTextEffect_cgfq5")]
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Continuar"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Selecionar Nível"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Desafio"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "Créditos"
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -554.28577
+offset_top = 879.0
+offset_right = 554.28577
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer"]
+layout_mode = 2
+texture = ExtResource("5_a46j4")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="SoundIcon" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -512.0
+offset_top = -512.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.26, 0.26)
+pivot_offset = Vector2(512, 512)
+texture_normal = ExtResource("4_il54y")
+stretch_mode = 4
+
+[node name="Sender" type="Node" parent="."]
+script = ExtResource("5_4takm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1150.0
+offset_right = -535.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer2/Control"]
+clip_contents = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 239.4
+offset_bottom = 130.0
+size_flags_vertical = 3
+texture = ExtResource("5_a46j4")
+expand_mode = 3
+stretch_mode = 4
+
+[connection signal="pressed" from="VBoxContainer/Button" to="Sender" method="connect_signal_named" binds= ["score_increased"]]
+[connection signal="pressed" from="VBoxContainer/Button2" to="Sender" method="connect_signal_named" binds= ["score_increased"]]
+[connection signal="pressed" from="VBoxContainer/Button3" to="Sender" method="connect_signal_named" binds= ["score_increased"]]
+[connection signal="pressed" from="VBoxContainer/Button4" to="Sender" method="connect_signal_named" binds= ["score_increased"]]

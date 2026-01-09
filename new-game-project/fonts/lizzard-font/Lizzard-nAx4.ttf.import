@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://drnw8khp6uumy"
-path="res://.godot/imported/CuteMeow-51Pra.otf-6ee98d7aa4ff6d331c7162b22fc48029.fontdata"
+uid="uid://chhcjebwjveho"
+path="res://.godot/imported/Lizzard-nAx4.ttf-862ee9a37c70921d598db2f6f119d2f7.fontdata"
 
 [deps]
 
-source_file="res://fonts/cute-meow-font/CuteMeow-51Pra.otf"
-dest_files=["res://.godot/imported/CuteMeow-51Pra.otf-6ee98d7aa4ff6d331c7162b22fc48029.fontdata"]
+source_file="res://fonts/lizzard-font/Lizzard-nAx4.ttf"
+dest_files=["res://.godot/imported/Lizzard-nAx4.ttf-862ee9a37c70921d598db2f6f119d2f7.fontdata"]
 
 [params]
 

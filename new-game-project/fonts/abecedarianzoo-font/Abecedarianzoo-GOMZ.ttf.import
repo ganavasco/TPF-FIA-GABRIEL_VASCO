@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://diue5ubchfrmh"
-path="res://.godot/imported/DoggySmart-j99j0.ttf-9d73970a0b9a30f2fb4cd6ede6a82ec4.fontdata"
+uid="uid://f4ai7kspi4u5"
+path="res://.godot/imported/Abecedarianzoo-GOMZ.ttf-05a74f9f9053a7e980fac8ebe619d88d.fontdata"
 
 [deps]
 
-source_file="res://fonts/doggy-smart-font/DoggySmart-j99j0.ttf"
-dest_files=["res://.godot/imported/DoggySmart-j99j0.ttf-9d73970a0b9a30f2fb4cd6ede6a82ec4.fontdata"]
+source_file="res://fonts/abecedarianzoo-font/Abecedarianzoo-GOMZ.ttf"
+dest_files=["res://.godot/imported/Abecedarianzoo-GOMZ.ttf-05a74f9f9053a7e980fac8ebe619d88d.fontdata"]
 
 [params]
 

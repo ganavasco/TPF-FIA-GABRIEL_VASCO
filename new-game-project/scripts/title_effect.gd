@@ -8,7 +8,7 @@ func _process_custom_fx(char_fx : CharFXTransform) -> bool:
 	#var text_server := TextServerManager.get_primary_interface()
 	
 	#Vary hue
-	var add := 0.7
+	var add := 0.5
 	var hue := char_fx.range.x /30.0 + add
 	char_fx.color = Color.from_hsv(hue, 1.0, 1.0)
 	

@@ -8,9 +8,10 @@ enum ItemType{COLOR, HATS, PANTS}
 var score : int = 10
 var dic1 := {"CHAVE_1" : [], "CHAVE_2" : [], "CHAVE_3" : []}
 var dic2 := {"CHAVE_1" : "", "CHAVE_2" : "", "CHAVE_3" : ""}
-
 var data : Dictionary
 var access : FileAccess
+
+#signal xposition_debug(xposition)
 
 func save_game() -> void:
 	data = {"score" : score, "nome_dicionario_1" : dic1, "nome_dicionario_2" : dic2}
